@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<bean id="emps" class="org.jsp.collectioninjection.Employees">
+		<!-- INJECTING THE LIST -->
+		<property name="names">
+			<list>
+				<value>Pushpa</value>
+				<value>Rocky</value>
+				<value>Balayya</value>
+			</list>
+		</property>
+		<!-- INJECTING THE SET -->
+		<property name="ids">
+			<set>
+				<value>101</value>
+				<value>102</value>
+				<value>103</value>
+			</set>
+		</property>
+		<!-- INJECTING THE MAP -->
+		<property name="details">
+			<map>
+				<entry key="101" value="Pushpa"></entry>
+				<entry key="102" value="Rocky"></entry>
+				<entry key="103" value="Balayya"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>
+
+
+
+
+
